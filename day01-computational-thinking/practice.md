@@ -45,8 +45,11 @@ flowchart TD
     C --> D[Add 1/4 cup of water]
     D --> E[Place the saucepan on stove]
     E --> F[Turn the stove on]
-    F --> G[Boil for 5 minutes]
-    G --> H[Add 1 tablespoon tea leaves]
+    F --> G2{Is it boiling?}
+    G2 --> |No| W[wait]
+    W --> G2
+    G2 --> |Yes| G[boil 5 minutes]
+    G --> H[Add 1 tablespoon of tea leaves]
     H --> I[Add 1/2 tablespoon of sugar]
     I --> J[Boil for 3 minutes]
     J --> K[Pour tea into cup]
